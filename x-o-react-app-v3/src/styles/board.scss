@@ -1,0 +1,33 @@
+/* src/styles/board.scss */
+
+// Variables in SASS allow you to assign a value to a name that you can refer to later.
+// This can make your code more readable and easier to maintain because you can update that value in one place,
+// and it will change everywhere it is used.
+
+// Here, $board-margin is a SASS variable.
+$board-margin: 0 auto;
+
+
+// The .board class has a simple style block using the SASS variable $board-margin.
+
+.board {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    margin: $board-margin;
+
+    // Nested rules in SASS let you write your styles in a more organized and easy-to-read way 
+    // by placing rules for child elements within the parent rule block. 
+    // The '&' symbol is used to refer to the parent selector.
+
+    // In this case, the '&-row' nested rule is equivalent to '.board-row'. 
+    // This rule is a child rule of the '.board' class and is nested inside the parent rule block.
+
+    &-row {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}

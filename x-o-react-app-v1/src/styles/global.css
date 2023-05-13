@@ -1,0 +1,17 @@
+/* src/styles/global.css */
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #ccc;
+    justify-content: center;
+}
+  
+h1 {
+    font-size: 24px;
+    color: #000000;
+}
+
+.winner {
+    font-weight: 200;
+    font-size: 80px;
+}

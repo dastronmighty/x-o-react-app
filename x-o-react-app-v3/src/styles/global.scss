@@ -1,0 +1,23 @@
+/* src/styles/global.scss */
+
+// Variables
+$font-family: Verdana, Geneva, Tahoma, sans-serif;
+$background-color: #ccc;
+$primary-text-color: #000000;
+$winner-font-size: 80px;
+
+body {
+    font-family: $font-family;
+    background-color: $background-color;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 24px;
+    color: $primary-text-color;
+}
+
+.winner {
+    font-weight: 200;
+    font-size: $winner-font-size;
+}

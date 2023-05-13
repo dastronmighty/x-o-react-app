@@ -1,0 +1,46 @@
+/* src/styles/square.scss */
+
+// Variables in SASS allow you to assign a value to a name that you can refer to later. 
+// This can make your code more readable and easier to maintain, 
+// because you can update that value in one place and it will change everywhere it is used. 
+
+// Here, $cell-width, $cell-height, $cell-border, and $cell-background-color are all SASS variables.
+
+$cell-width: 100px;
+$cell-height: 100px;
+$cell-border: 1px solid black;
+$cell-background-color: #ffffff;
+
+
+// Mixins in SASS are a way to define styles that can be re-used throughout your stylesheet. 
+// They can take arguments, which allows you to produce a wide variety of styles with a single mixin. 
+
+// The @mixin directive is used to define a mixin. 
+// In this case, the 'center-flex' mixin is defined to include flex display properties.
+
+@mixin center-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+// The .board-cell class uses the 'center-flex' mixin defined above. 
+// The @include directive is used to include the mixin in the block of styles. 
+
+.board-cell {
+    width: $cell-width;
+    height: $cell-height;
+    border: $cell-border;
+    background: $cell-background-color;
+    // This line is saying "include the styles defined in the 'center-flex' mixin here."
+    @include center-flex;
+}
+
+// .board-cell-content is a simple style block without any special SASS features.
+
+.board-cell-content {
+    font-size: 100%;
+    text-align: center;
+    font-weight: bold;
+}
